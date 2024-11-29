@@ -101,3 +101,5 @@ Thumbs.db
 # Generated Xcode project
 *.xcodeproj
 *.xcworkspace
+!BTTemplate.xcodeproj/
+!BTTemplate.xcworkspace/
