@@ -1,0 +1,37 @@
+name: GameTemplate
+options:
+  bundleIdPrefix: com.billyblair
+  deploymentTarget:
+    iOS: 13.0
+  xcodeVersion: "14.0"
+  buildSettings:
+    ENABLE_BITCODE: NO
+
+settings:
+  base:
+    DEVELOPMENT_TEAM: 2UA4PUUFQ3
+    CODE_SIGN_IDENTITY: "Apple Development"
+    CODE_SIGN_STYLE: Automatic
+    GENERATE_INFOPLIST_FILE: YES
+    CURRENT_PROJECT_VERSION: 1
+    MARKETING_VERSION: 1.0.0
+    SWIFT_VERSION: 5.0
+
+targets:
+  GameTemplate:
+    type: application
+    platform: iOS
+    sources: 
+      - path: GameTemplate
+    dependencies:
+      - framework: ../BillyTempoCasualGamesFramework/BillyTempoCasualGamesFramework.xcframework
+    settings:
+      base:
+        DEVELOPMENT_TEAM: 2UA4PUUFQ3
+        PRODUCT_BUNDLE_IDENTIFIER: com.billyblair.GameTemplate
+        PRODUCT_NAME: GameTemplate
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
+        TARGETED_DEVICE_FAMILY: 1,2
+        CODE_SIGN_STYLE: Automatic
+        CODE_SIGN_IDENTITY: "Apple Development"
