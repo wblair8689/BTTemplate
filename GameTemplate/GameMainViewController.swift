@@ -3,19 +3,19 @@ import SpriteKit
 import GameplayKit
 import BillyTempoCasualGamesFramework
 
-final class PongViewController: GameViewController<PongGame> {
+final class GameMainViewController: GameViewController<GameMain> {
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("PongViewController: viewDidLoad")
+        print("GameMainViewController: viewDidLoad")
     }
 }
 
-enum PongGame: GameSceneConfigurable {
+enum GameMain: GameSceneConfigurable {
     static func createSceneConfiguration() throws -> SceneConfiguration {
-        return PongConfiguration.createSceneConfiguration()
+        return GameConfiguration.createSceneConfiguration()
     }
     
     static var orientation: UIInterfaceOrientationMask {
-        return PongConfiguration.orientation
+        return GameConfiguration.orientation
     }
 }

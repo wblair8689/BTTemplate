@@ -1,89 +1,211 @@
 # BillyTempo Casual Games Framework Usage Guide
 
+## Prerequisites
+- Xcode 14.0 or later
+- iOS 16.0+ / macOS 13.0+
+- Swift 5.7+
+- Basic knowledge of SpriteKit and GameplayKit
+
 ## Overview
-The BillyTempo Casual Games Framework is designed to simplify the creation of casual games using SpriteKit and GameplayKit. This guide will walk you through the key components of the framework, how to configure game objects with physics and movement, and how to assemble these components into a configuration file similar to `PongConfiguration.swift`.
+The BillyTempo Casual Games Framework is designed to simplify the creation of casual games using SpriteKit and GameplayKit. This guide will walk you through the key components of the framework and how to configure your game.
 
 ## Key Components
 
-### GameScene
-- **Description**: Base scene class that handles setup and updates.
-- **Properties**:
-  - `entityManager`: `EntityManager` - Manages entities within the scene.
-  - `componentSystems`: `[GKComponentSystem<GKComponent>]` - Array of component systems for managing game logic.
-  - `sceneConfig`: `SceneConfiguration?` - Configuration for the scene properties.
+### Scene Configuration
+- **SceneConfiguration**: Main configuration for your game scene
+  - `size`: `CGSize` - Scene dimensions (defaults to screen size if not specified)
+  - `backgroundColor`: `SKColor` - Scene background color
+  - `gravity`: `CGFloat` - Scene gravity value (0 for no gravity)
+  - `objects`: `[GameObjectConfiguration]` - Array of game objects
+  - `debug`: `DebugSettings` - Debug visualization options
+  - `view`: `ViewSettings` - Scene view settings
 
-### GameObjectConfiguration
-- **Description**: Protocol for defining game object properties and components.
-- **Key Properties**:
-  - `position`: `CGPoint` - The position of the object in the scene.
-  - `components`: `[ComponentConfiguration]` - Array of component configurations for the object.
-  - `type`: `String` - A string representing the object type.
+### Debug Settings
+- `showsFPS`: `Bool` - Display FPS counter
+- `showsNodeCount`: `Bool` - Display node count
+- `showsPhysics`: `Bool` - Show physics bodies
 
-### BallConfiguration
-- **Description**: Configuration for creating a ball object.
-- **Key Properties**:
-  - `radius`: `CGFloat` - The radius of the ball.
-    - **Constraints**: Minimum 5, Maximum 20, Default 10
-  - `color`: `SKColor` - The color of the ball.
-  - `id`: `Int` - A unique identifier for the ball.
-  - `velocity`: `CGVector` - The initial velocity of the ball.
-    - **Constraints**: Minimum 100, Maximum 500, Default `CGVector(dx: 200, dy: 200)`
+### Game Objects
+All game objects implement the `GameObjectConfiguration` protocol:
+- `position`: `CGPoint` - Object position in scene (automatically calculated from relative coordinates)
+- `components`: `[ComponentConfiguration]` - Object components
+- `type`: `String` - Object type identifier (used for collision detection)
 
-### PaddleConfiguration
-- **Description**: Configuration for creating a paddle object.
-- **Key Properties**:
-  - `size`: `CGSize` - The size of the paddle.
-    - **Width Constraints**: Minimum 10, Maximum 30, Default 20
-    - **Height Constraints**: Minimum 40, Maximum 100, Default 60
-  - `color`: `SKColor` - The color of the paddle.
-  - `speed`: `CGFloat` - The speed of the paddle.
-    - **Constraints**: Minimum 100, Maximum 500, Default 200
+#### Available Game Objects:
 
-### WallConfiguration
-- **Description**: Configuration for creating a wall object.
-- **Key Properties**:
-  - `size`: `CGSize` - The size of the wall.
-    - **Width Constraints**: Minimum 10, Default 20
-    - **Height Constraints**: Minimum 50, Default 200
-  - `color`: `SKColor` - The color of the wall.
+1. **BallConfiguration**
+   ```swift
+   BallConfiguration(
+       radius: CGFloat = 10,
+       color: SKColor = .white,
+       id: Int = 1,
+       relativeX: CGFloat,  // 0.0 to 1.0
+       relativeY: CGFloat,  // 0.0 to 1.0
+       velocity: CGVector = CGVector(dx: 300, dy: 300),
+       components: [ComponentConfiguration] = []
+   )
+   ```
 
-## Creating Game Objects with Physics and Movement
+2. **PaddleConfiguration**
+   ```swift
+   PaddleConfiguration(
+       width: CGFloat = 20,
+       height: CGFloat = 100,
+       color: SKColor = .white,
+       relativeX: CGFloat,  // 0.0 to 1.0
+       relativeY: CGFloat,  // 0.0 to 1.0
+       components: [ComponentConfiguration] = []
+   )
+   ```
 
-### Physics Components
-- **CollisionComponent**: Manages physics collisions between objects.
-  - **Properties**:
-    - `collidesWith`: `UInt32` - Bitmask indicating which categories this object collides with.
-    - `notifyOnContactBegin`: `Bool` - Boolean indicating if contact notifications are enabled.
+3. **WallConfiguration**
+   ```swift
+   WallConfiguration(
+       relativeWidth: CGFloat = 1.0,  // 0.0 to 1.0
+       relativeHeight: CGFloat = 0.03,  // 0.0 to 1.0
+       color: SKColor = .clear,
+       relativeX: CGFloat,  // 0.0 to 1.0
+       relativeY: CGFloat,  // 0.0 to 1.0
+       components: [ComponentConfiguration] = []
+   )
+   ```
 
-### Movement Components
-- **MovementComponent**: Handles object movement and velocity.
-  - **Properties**:
-    - `maxSpeed`: `CGFloat` - Maximum speed of the object.
-    - `rotationSpeed`: `CGFloat` - Speed at which the object can rotate.
+### Components
+Components add behavior to game objects. Components can be combined to create complex behaviors.
 
-## Assembling a Configuration File
-To create a configuration file like `PongConfiguration.swift`, follow these steps:
+1. **BounceComponent**
+   ```swift
+   BounceComponentConfiguration(
+       bounciness: CGFloat = 1.0  // 1.0 means perfect bounce
+   )
+   ```
+   Used for objects that should bounce off surfaces. Commonly combined with CollisionComponent.
 
-1. **Import Necessary Modules**
+2. **CollisionComponent**
+   ```swift
+   CollisionComponentConfiguration(
+       collidesWith: UInt32,  // Bitmask of collision categories
+       notifyOnContactBegin: Bool = true,
+       notifyOnContactEnd: Bool = false
+   )
+   ```
+   Handles physics collisions between objects. Common category values:
+   - `.ball`: 0x1 << 0
+   - `.paddle`: 0x1 << 1
+   - `.wall`: 0x1 << 2
+
+3. **MovementComponent**
+   ```swift
+   MovementComponentConfiguration(
+       maxSpeed: CGFloat = 500.0,
+       rotationSpeed: CGFloat = .pi  // Radians per second
+   )
+   ```
+   Controls object movement. Often used with CollisionComponent for physics-based movement.
+
+## Creating and Starting a Game
+
+1. **Create a Configuration Enum**
    ```swift
    import SpriteKit
    import GameplayKit
    import BillyTempoCasualGamesFramework
+   
+   public enum GameConfiguration {
+       // Game settings
+       public static let orientation: UIInterfaceOrientationMask = .landscape
+       public static let hideStatusBar: Bool = true
+       
+       // Scene configuration
+       public static func createSceneConfiguration() -> SceneConfiguration {
+           let objects: [any GameObjectConfiguration] = [
+               // Add your game objects here
+           ]
+           
+           return SceneConfiguration(
+               backgroundColor: .black,
+               gravity: 0,
+               objects: objects,
+               debug: DebugSettings(
+                   showsFPS: true,
+                   showsNodeCount: true,
+                   showsPhysics: true
+               ),
+               view: ViewSettings(
+                   ignoresSiblingOrder: true
+               )
+           )
+       }
+   }
    ```
 
-2. **Define Game Settings**
-   Set properties such as orientation and status bar visibility.
+2. **Create and Present the Scene**
+   ```swift
+   class GameViewController: UIViewController {
+       override func viewDidLoad() {
+           super.viewDidLoad()
+           
+           do {
+               // Create scene with configuration
+               let config = GameConfiguration.createSceneConfiguration()
+               let scene = GameScene(size: config.size)
+               scene.configure(with: config)
+               
+               // Configure view
+               if let view = self.view as? SKView {
+                   view.presentScene(scene)
+               }
+           } catch {
+               print("Failed to create scene: \(error)")
+           }
+       }
+   }
+   ```
 
-3. **Create Scene Configuration**
-   Define the scene size and background color.
+3. **Position Objects Using Relative Coordinates**
+   - Use relative coordinates (0.0 to 1.0) for positioning
+   - The framework automatically converts to screen coordinates
+   - Example: `relativeX: 0.5, relativeY: 0.5` positions at screen center
 
-4. **Configure Game Objects**
-   Use the configuration structures to define balls, paddles, and walls with their respective properties.
+4. **Add Components**
+   ```swift
+   // Example: Ball with physics and movement
+   BallConfiguration(
+       relativeX: 0.5,
+       relativeY: 0.5,
+       components: [
+           MovementComponentConfiguration(maxSpeed: 300),
+           CollisionComponentConfiguration(
+               collidesWith: 0x1 << 1 | 0x1 << 2  // Collides with paddles and walls
+           ),
+           BounceComponentConfiguration(bounciness: 1.0)
+       ]
+   )
+   ```
 
-5. **Instantiate Game Objects**
-   Use the `createGameObject(from config:)` method to add objects to the scene.
+## Best Practices
 
-6. **Finalize Scene Setup**
-   Print debug information and return the configured scene.
+1. **Object Positioning**
+   - Use relative coordinates for consistent positioning across devices
+   - Keep game objects within the 0.0 to 1.0 range
+   - Test on different screen sizes
 
-By following this guide, you can effectively utilize the BillyTempo Casual Games Framework to create engaging and interactive casual games.
+2. **Component Usage**
+   - Add only necessary components to objects
+   - Configure component parameters based on gameplay requirements
+   - Common combinations:
+     - Movement + Collision for physics-based objects
+     - Bounce + Collision for bouncing objects
+     - Collision only for static barriers
+
+3. **Debug Settings**
+   - Enable debug visualization during development
+   - Disable for production releases
+   - Use physics visualization to verify collision shapes
+
+4. **Scene Configuration**
+   - Set appropriate gravity for your game type (0 for top-down games)
+   - Configure view settings based on rendering needs
+   - Consider memory usage when setting node counts
+
+For a complete example, refer to the Pong game implementation in the Examples directory.

@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03812B72DBC3EC62BB26472C /* GameConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A670CBF637795AEFA3BD508 /* GameConfiguration.swift */; };
 		13E76BD40FE9187A2F6A5896 /* BillyTempoCasualGamesFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9972F4106BE5A38168F73F0 /* BillyTempoCasualGamesFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		4290F18E27784B9C1D05DEDA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25691D448B9B924EFF8BA7F3 /* main.swift */; };
-		7A918E66CA98DEB6176F16F2 /* PongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123268BCCF662043BFCBA1E /* PongViewController.swift */; };
 		8B1C9172796BF136122D6D2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5BEB90AF798494549375E7 /* Preview Assets.xcassets */; };
 		8FF52154B98350D6E3080CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110E2E0E286C398E80664E6 /* AppDelegate.swift */; };
+		A54450741B7AB70994FEA8F0 /* GameMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEBE038EF55861778642B70 /* GameMainViewController.swift */; };
 		A77CC3B4D1B90F7DBDF46E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FAD389D0DA3DF87DA41C5C /* Assets.xcassets */; };
-		DEA6229204894ED6F8EAE771 /* PongConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C07BEC0DC13EDE9C6F75526 /* PongConfiguration.swift */; };
 		EAAF777BC69068B911B27B93 /* BillyTempoCasualGamesFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9972F4106BE5A38168F73F0 /* BillyTempoCasualGamesFramework.xcframework */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +33,9 @@
 
 /* Begin PBXFileReference section */
 		25691D448B9B924EFF8BA7F3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
-		4C07BEC0DC13EDE9C6F75526 /* PongConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongConfiguration.swift; sourceTree = "<group>"; };
-		6123268BCCF662043BFCBA1E /* PongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongViewController.swift; sourceTree = "<group>"; };
 		79FAD389D0DA3DF87DA41C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8A670CBF637795AEFA3BD508 /* GameConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameConfiguration.swift; sourceTree = "<group>"; };
+		9EEBE038EF55861778642B70 /* GameMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameMainViewController.swift; sourceTree = "<group>"; };
 		A14AA465068BC1AC126B1520 /* BTTemplate.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BTTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB5BEB90AF798494549375E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E110E2E0E286C398E80664E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -59,9 +59,9 @@
 			children = (
 				E110E2E0E286C398E80664E6 /* AppDelegate.swift */,
 				79FAD389D0DA3DF87DA41C5C /* Assets.xcassets */,
+				8A670CBF637795AEFA3BD508 /* GameConfiguration.swift */,
+				9EEBE038EF55861778642B70 /* GameMainViewController.swift */,
 				25691D448B9B924EFF8BA7F3 /* main.swift */,
-				4C07BEC0DC13EDE9C6F75526 /* PongConfiguration.swift */,
-				6123268BCCF662043BFCBA1E /* PongViewController.swift */,
 				8D3B1D15AE96C32AC8795634 /* Preview Content */,
 			);
 			path = GameTemplate;
@@ -171,8 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8FF52154B98350D6E3080CA9 /* AppDelegate.swift in Sources */,
-				DEA6229204894ED6F8EAE771 /* PongConfiguration.swift in Sources */,
-				7A918E66CA98DEB6176F16F2 /* PongViewController.swift in Sources */,
+				03812B72DBC3EC62BB26472C /* GameConfiguration.swift in Sources */,
+				A54450741B7AB70994FEA8F0 /* GameMainViewController.swift in Sources */,
 				4290F18E27784B9C1D05DEDA /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@ import UIKit
 #endif
 import CoreGraphics
 
-public enum PongConfiguration {
+public enum GameConfiguration {
     enum GameError: Error {
         case sceneCreationFailed
         case entityCreationFailed

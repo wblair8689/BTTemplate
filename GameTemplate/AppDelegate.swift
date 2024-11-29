@@ -9,7 +9,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         os_log("AppDelegate: Application launching")
         
         window = UIWindow(frame: UIScreen.main.bounds)
-        let gameViewController = PongViewController()
+        let gameViewController = GameMainViewController()
         window?.rootViewController = gameViewController
         window?.makeKeyAndVisible()
         
