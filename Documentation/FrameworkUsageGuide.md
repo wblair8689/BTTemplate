@@ -1,13 +1,9 @@
 # BillyTempo Casual Games Framework Usage Guide
 
-## Prerequisites
-- Xcode 14.0 or later
-- iOS 16.0+ / macOS 13.0+
-- Swift 5.7+
-- Basic knowledge of SpriteKit and GameplayKit
-
 ## Overview
-The BillyTempo Casual Games Framework is designed to simplify the creation of casual games using SpriteKit and GameplayKit. This guide will walk you through the key components of the framework and how to configure your game.
+The BillyTempo Casual Games Framework is designed to simplify the creation of casual games using SpriteKit and GameplayKit. 
+The games don't have timers or levels or points
+This guide will walk you through the key components of the framework and how to configure your game.
 
 ## Key Components
 
