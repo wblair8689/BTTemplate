@@ -1,4 +1,4 @@
-name: GameTemplate
+name: BTTemplate
 options:
   bundleIdPrefix: com.billyblair
   deploymentTarget:
@@ -18,7 +18,7 @@ settings:
     SWIFT_VERSION: 5.0
 
 targets:
-  GameTemplate:
+  BTTemplate:
     type: application
     platform: iOS
     sources: 
@@ -28,8 +28,8 @@ targets:
     settings:
       base:
         DEVELOPMENT_TEAM: 2UA4PUUFQ3
-        PRODUCT_BUNDLE_IDENTIFIER: com.billyblair.GameTemplate
-        PRODUCT_NAME: GameTemplate
+        PRODUCT_BUNDLE_IDENTIFIER: com.billyblair.BTTemplate
+        PRODUCT_NAME: BTTemplate
         GENERATE_INFOPLIST_FILE: YES
         INFOPLIST_KEY_UILaunchStoryboardName: LaunchScreen
         TARGETED_DEVICE_FAMILY: 1,2
