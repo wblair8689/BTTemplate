@@ -103,3 +103,5 @@ Thumbs.db
 *.xcworkspace
 !BTTemplate.xcodeproj/
 !BTTemplate.xcworkspace/
+
+GameTemplate/gitToken
