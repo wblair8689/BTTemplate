@@ -1,0 +1,386 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		13E76BD40FE9187A2F6A5896 /* BillyTempoCasualGamesFramework.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F9972F4106BE5A38168F73F0 /* BillyTempoCasualGamesFramework.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		4290F18E27784B9C1D05DEDA /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 25691D448B9B924EFF8BA7F3 /* main.swift */; };
+		7A918E66CA98DEB6176F16F2 /* PongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6123268BCCF662043BFCBA1E /* PongViewController.swift */; };
+		8B1C9172796BF136122D6D2C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB5BEB90AF798494549375E7 /* Preview Assets.xcassets */; };
+		8FF52154B98350D6E3080CA9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E110E2E0E286C398E80664E6 /* AppDelegate.swift */; };
+		A77CC3B4D1B90F7DBDF46E92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79FAD389D0DA3DF87DA41C5C /* Assets.xcassets */; };
+		DEA6229204894ED6F8EAE771 /* PongConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C07BEC0DC13EDE9C6F75526 /* PongConfiguration.swift */; };
+		EAAF777BC69068B911B27B93 /* BillyTempoCasualGamesFramework.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9972F4106BE5A38168F73F0 /* BillyTempoCasualGamesFramework.xcframework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		040C49654F05A61D2D41C04F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				13E76BD40FE9187A2F6A5896 /* BillyTempoCasualGamesFramework.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		25691D448B9B924EFF8BA7F3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		4C07BEC0DC13EDE9C6F75526 /* PongConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongConfiguration.swift; sourceTree = "<group>"; };
+		6123268BCCF662043BFCBA1E /* PongViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PongViewController.swift; sourceTree = "<group>"; };
+		79FAD389D0DA3DF87DA41C5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A14AA465068BC1AC126B1520 /* BTTemplate.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = BTTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB5BEB90AF798494549375E7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E110E2E0E286C398E80664E6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F9972F4106BE5A38168F73F0 /* BillyTempoCasualGamesFramework.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = BillyTempoCasualGamesFramework.xcframework; path = ../BillyTempoCasualGamesFramework/BillyTempoCasualGamesFramework.xcframework; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A944A4CD15547107CEC1E235 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAAF777BC69068B911B27B93 /* BillyTempoCasualGamesFramework.xcframework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3864F700F3BFABA938A7F6E7 /* GameTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				E110E2E0E286C398E80664E6 /* AppDelegate.swift */,
+				79FAD389D0DA3DF87DA41C5C /* Assets.xcassets */,
+				25691D448B9B924EFF8BA7F3 /* main.swift */,
+				4C07BEC0DC13EDE9C6F75526 /* PongConfiguration.swift */,
+				6123268BCCF662043BFCBA1E /* PongViewController.swift */,
+				8D3B1D15AE96C32AC8795634 /* Preview Content */,
+			);
+			path = GameTemplate;
+			sourceTree = "<group>";
+		};
+		8D3B1D15AE96C32AC8795634 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				CB5BEB90AF798494549375E7 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A8BD49B81BCE05DB6FA3A0C6 = {
+			isa = PBXGroup;
+			children = (
+				3864F700F3BFABA938A7F6E7 /* GameTemplate */,
+				B8DF9E432EF71622C86A86FF /* Frameworks */,
+				BFC8AE13AB212B9945617418 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B8DF9E432EF71622C86A86FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F9972F4106BE5A38168F73F0 /* BillyTempoCasualGamesFramework.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BFC8AE13AB212B9945617418 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A14AA465068BC1AC126B1520 /* BTTemplate.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CB57669014A98AF39AD96449 /* BTTemplate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D9A7504A33A519D133097B56 /* Build configuration list for PBXNativeTarget "BTTemplate" */;
+			buildPhases = (
+				4748CB9D4597E91C9B1AEDF9 /* Sources */,
+				6A9555E541CAD73B15242859 /* Resources */,
+				A944A4CD15547107CEC1E235 /* Frameworks */,
+				040C49654F05A61D2D41C04F /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BTTemplate;
+			productName = BTTemplate;
+			productReference = A14AA465068BC1AC126B1520 /* BTTemplate.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3FCA17E8EEE5B6E6EFD7C117 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					CB57669014A98AF39AD96449 = {
+						DevelopmentTeam = 2UA4PUUFQ3;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 6900DAAF15A574B2791A668D /* Build configuration list for PBXProject "BTTemplate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = A8BD49B81BCE05DB6FA3A0C6;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CB57669014A98AF39AD96449 /* BTTemplate */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6A9555E541CAD73B15242859 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A77CC3B4D1B90F7DBDF46E92 /* Assets.xcassets in Resources */,
+				8B1C9172796BF136122D6D2C /* Preview Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4748CB9D4597E91C9B1AEDF9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FF52154B98350D6E3080CA9 /* AppDelegate.swift in Sources */,
+				DEA6229204894ED6F8EAE771 /* PongConfiguration.swift in Sources */,
+				7A918E66CA98DEB6176F16F2 /* PongViewController.swift in Sources */,
+				4290F18E27784B9C1D05DEDA /* main.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1944164608DD695A3939A23C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 2UA4PUUFQ3;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		6EB66B1F95D0EA151E302DFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 2UA4PUUFQ3;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		A5D386A99E3E4D79F858E876 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UA4PUUFQ3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../BillyTempoCasualGamesFramework\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billyblair.BTTemplate;
+				PRODUCT_NAME = BTTemplate;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D7B0A662B8E5FAB555F9AC23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2UA4PUUFQ3;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"../BillyTempoCasualGamesFramework\"",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.billyblair.BTTemplate;
+				PRODUCT_NAME = BTTemplate;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6900DAAF15A574B2791A668D /* Build configuration list for PBXProject "BTTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1944164608DD695A3939A23C /* Debug */,
+				6EB66B1F95D0EA151E302DFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D9A7504A33A519D133097B56 /* Build configuration list for PBXNativeTarget "BTTemplate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A5D386A99E3E4D79F858E876 /* Debug */,
+				D7B0A662B8E5FAB555F9AC23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3FCA17E8EEE5B6E6EFD7C117 /* Project object */;
+}
